@@ -1,0 +1,899 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>WebCraft Nigeria — Product Catalogue Websites That Sell</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=Epilogue:wght@300;400;500&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+<noscript><link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=Epilogue:wght@300;400;500&display=swap" rel="stylesheet"></noscript>
+
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window, document,'script','https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '1745704546595911');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1745704546595911&ev=PageView&noscript=1"/></noscript>
+
+<!-- TikTok Pixel -->
+<script>
+!function (w, d, t) {
+  w.TiktokAnalyticsObject=t;var ttq=w[t]=w[t]||[];ttq.methods=["page","track","identify","instances","debug","on","off","once","ready","alias","group","enableCookie","disableCookie","holdConsent","revokeConsent","grantConsent"],ttq.setAndDefer=function(t,e){t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}};for(var i=0;i<ttq.methods.length;i++)ttq.setAndDefer(ttq,ttq.methods[i]);ttq.instance=function(t){for(var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n]);return e},ttq.load=function(e,n){var r="https://analytics.tiktok.com/i18n/pixel/events.js",o=n&&n.partner;ttq._i=ttq._i||{},ttq._i[e]=[],ttq._i[e]._u=r,ttq._t=ttq._t||{},ttq._t[e]=+new Date,ttq._o=ttq._o||{},ttq._o[e]=n||{};n=document.createElement("script");n.type="text/javascript",n.async=!0,n.src=r+"?sdkid="+e+"&lib="+t;e=document.getElementsByTagName("script")[0];e.parentNode.insertBefore(n,e)};
+  ttq.load('D7UJ8CRC77UCL5G1KBF0');
+  ttq.page();
+}(window, document, 'ttq');
+</script>
+
+<!-- Google tag -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-18084238363"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'AW-18084238363');
+</script>
+
+<style>
+  :root {
+    --black: #080810;
+    --white: #f8f7f4;
+    --accent: #00e5a0;
+    --accent2: #0057ff;
+    --mid: #1a1a2e;
+    --card: #111120;
+    --muted: #8888aa;
+    --border: rgba(255,255,255,0.07);
+    --font-head: 'Syne', sans-serif;
+    --font-body: 'Epilogue', sans-serif;
+  }
+
+  *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body { font-family: var(--font-body); background: var(--black); color: var(--white); font-size: 17px; line-height: 1.75; overflow-x: hidden; cursor: none; }
+
+  /* CURSOR */
+  .cursor { width:12px; height:12px; background:var(--accent); border-radius:50%; position:fixed; pointer-events:none; z-index:9999; transition:transform .15s ease,opacity .15s ease; transform:translate(-50%,-50%); }
+  .cursor-ring { width:36px; height:36px; border:1.5px solid var(--accent); border-radius:50%; position:fixed; pointer-events:none; z-index:9998; transform:translate(-50%,-50%); transition:all .12s ease; opacity:.5; }
+
+  /* NAV */
+  nav { position:fixed; top:0; left:0; right:0; z-index:100; padding:24px 6vw; display:flex; justify-content:space-between; align-items:center; background:rgba(8,8,16,0.92); backdrop-filter:blur(10px); border-bottom:1px solid var(--border); }
+  .nav-logo { font-family:var(--font-head); font-weight:800; font-size:1.2rem; letter-spacing:-.02em; color:var(--white); text-decoration:none; }
+  .nav-logo span { color:var(--accent); }
+  .nav-links { display:flex; gap:36px; list-style:none; }
+  .nav-links a { color:var(--muted); text-decoration:none; font-size:.9rem; font-weight:500; letter-spacing:.02em; transition:color .2s; }
+  .nav-links a:hover { color:var(--white); }
+  .nav-cta { background:var(--accent) !important; color:var(--black) !important; padding:10px 22px; border-radius:100px; font-weight:600 !important; font-size:.85rem !important; transition:transform .2s,box-shadow .2s !important; }
+  .nav-cta:hover { transform:translateY(-2px); box-shadow:0 8px 30px rgba(0,229,160,.35); color:var(--black) !important; }
+
+  /* TRUST BANNER */
+  .trust-banner { background:rgba(0,229,160,0.08); border-bottom:1px solid rgba(0,229,160,0.15); padding:10px 6vw; text-align:center; margin-top:72px; }
+  .trust-banner p { font-size:.82rem; color:var(--accent); font-weight:500; letter-spacing:.02em; }
+  .trust-banner strong { color:var(--white); }
+
+  /* HERO */
+  .hero { min-height:100vh; padding:80px 6vw 100px; position:relative; display:flex; align-items:center; overflow:hidden; }
+  .hero-bg { position:absolute; inset:0; background: radial-gradient(ellipse 60% 50% at 80% 50%,rgba(0,87,255,.12) 0%,transparent 70%), radial-gradient(ellipse 40% 60% at 20% 80%,rgba(0,229,160,.08) 0%,transparent 60%); }
+  .hero-grid { position:absolute; inset:0; background-image:linear-gradient(rgba(255,255,255,.025) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.025) 1px,transparent 1px); background-size:60px 60px; mask-image:radial-gradient(ellipse 80% 80% at 50% 50%,black,transparent); }
+  .hero-content { position:relative; max-width:900px; z-index:2; }
+
+  .hero-founder { display:flex; align-items:center; gap:14px; margin-bottom:28px; opacity:0; animation:fadeUp .8s ease .1s forwards; }
+  .founder-photo { width:56px; height:56px; border-radius:50%; border:2px solid var(--accent); overflow:hidden; flex-shrink:0; background:var(--card); display:flex; align-items:center; justify-content:center; }
+  .founder-photo img { width:100%; height:100%; object-fit:cover; border-radius:50%; display:block; }
+  .founder-tag { font-size:.78rem; color:var(--muted); }
+  .founder-tag strong { display:block; color:var(--white); font-family:var(--font-head); font-size:.82rem; font-weight:700; }
+
+  .hero-badge { display:inline-flex; align-items:center; gap:8px; background:rgba(0,229,160,.1); border:1px solid rgba(0,229,160,.25); color:var(--accent); padding:8px 18px; border-radius:100px; font-size:.8rem; font-weight:600; letter-spacing:.08em; text-transform:uppercase; margin-bottom:32px; opacity:0; animation:fadeUp .8s ease .2s forwards; }
+  .hero-badge::before { content:''; width:6px; height:6px; background:var(--accent); border-radius:50%; animation:pulse 2s infinite; }
+  @keyframes pulse { 0%,100%{opacity:1;transform:scale(1)} 50%{opacity:.4;transform:scale(.8)} }
+
+  .hero h1 { font-family:var(--font-head); font-size:clamp(1.9rem,3.2vw,3.4rem); font-weight:700; line-height:1.15; letter-spacing:-.01em; margin-bottom:28px; opacity:0; animation:fadeUp .8s ease .4s forwards; }
+  .hero h1 em { font-style:normal; color:var(--accent); }
+
+  .hero-sub { font-size:1.1rem; color:var(--muted); max-width:560px; line-height:1.8; margin-bottom:48px; font-weight:300; opacity:0; animation:fadeUp .8s ease .6s forwards; }
+
+  .hero-actions { display:flex; gap:16px; flex-wrap:wrap; opacity:0; animation:fadeUp .8s ease .8s forwards; }
+
+  .btn-primary { display:inline-flex; align-items:center; gap:10px; background:var(--accent); color:var(--black); padding:16px 32px; border-radius:100px; font-family:var(--font-head); font-weight:700; font-size:.95rem; text-decoration:none; transition:transform .2s,box-shadow .2s; letter-spacing:-.01em; border:none; cursor:pointer; }
+  .btn-primary:hover { transform:translateY(-3px); box-shadow:0 16px 40px rgba(0,229,160,.4); }
+  .btn-secondary { display:inline-flex; align-items:center; gap:10px; background:transparent; color:var(--white); padding:16px 32px; border-radius:100px; border:1px solid var(--border); font-family:var(--font-head); font-weight:600; font-size:.95rem; text-decoration:none; transition:border-color .2s,background .2s; }
+  .btn-secondary:hover { border-color:rgba(255,255,255,.2); background:rgba(255,255,255,.04); }
+
+  .hero-stats { display:flex; gap:48px; margin-top:80px; padding-top:48px; border-top:1px solid var(--border); opacity:0; animation:fadeUp .8s ease 1s forwards; flex-wrap:wrap; }
+  .stat-num { font-family:var(--font-head); font-size:2.4rem; font-weight:800; color:var(--white); letter-spacing:-.03em; line-height:1; }
+  .stat-num span { color:var(--accent); }
+  .stat-label { font-size:.85rem; color:var(--muted); margin-top:6px; }
+
+  @keyframes fadeUp { from{opacity:0;transform:translateY(24px)} to{opacity:1;transform:translateY(0)} }
+
+  /* MARQUEE */
+  .marquee-wrap { overflow:hidden; border-top:1px solid var(--border); border-bottom:1px solid var(--border); padding:18px 0; background:var(--card); }
+  .marquee-track { display:flex; gap:60px; animation:marquee 20s linear infinite; white-space:nowrap; }
+  .marquee-item { font-family:var(--font-head); font-size:.8rem; font-weight:600; letter-spacing:.15em; text-transform:uppercase; color:var(--muted); flex-shrink:0; }
+  .marquee-item span { color:var(--accent); margin-right:60px; }
+  @keyframes marquee { from{transform:translateX(0)} to{transform:translateX(-50%)} }
+
+  /* SECTIONS */
+  section { padding:120px 6vw; }
+  .section-label { font-size:.75rem; font-weight:600; letter-spacing:.15em; text-transform:uppercase; color:var(--accent); margin-bottom:20px; }
+  .section-title { font-family:var(--font-head); font-size:clamp(1.5rem,2.4vw,2.2rem); font-weight:700; letter-spacing:-.01em; line-height:1.22; margin-bottom:20px; }
+  .section-sub { color:var(--muted); font-size:1.05rem; max-width:520px; font-weight:300; }
+
+  /* PROBLEM */
+  .problem { background:var(--mid); position:relative; overflow:hidden; }
+  .problem::before { content:''; position:absolute; top:-200px; right:-200px; width:600px; height:600px; background:radial-gradient(circle,rgba(0,87,255,.08) 0%,transparent 70%); pointer-events:none; }
+  .problem-grid { display:grid; grid-template-columns:1fr 1fr; gap:80px; align-items:center; margin-top:60px; }
+  .problem-list { list-style:none; display:flex; flex-direction:column; gap:24px; }
+  .problem-item { display:flex; gap:16px; align-items:flex-start; padding:24px; background:rgba(255,255,255,.03); border:1px solid var(--border); border-radius:16px; transition:border-color .3s,transform .3s; }
+  .problem-item:hover { border-color:rgba(0,229,160,.2); transform:translateX(6px); }
+  .problem-icon { width:40px; height:40px; background:rgba(255,80,80,.1); border-radius:10px; display:flex; align-items:center; justify-content:center; font-size:1.1rem; flex-shrink:0; }
+  .problem-text strong { display:block; font-family:var(--font-head); font-weight:700; font-size:.95rem; margin-bottom:4px; color:var(--white); }
+  .problem-text p { font-size:.9rem; color:var(--muted); line-height:1.6; }
+  .chat-mock { background:var(--card); border:1px solid var(--border); border-radius:20px; padding:28px; }
+  .chat-header { display:flex; align-items:center; gap:12px; margin-bottom:24px; padding-bottom:16px; border-bottom:1px solid var(--border); }
+  .chat-avatar { width:40px; height:40px; background:linear-gradient(135deg,#25D366,#128C7E); border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:1.2rem; }
+  .chat-name { font-family:var(--font-head); font-weight:700; font-size:.9rem; }
+  .chat-status { font-size:.75rem; color:#25D366; }
+  .chat-messages { display:flex; flex-direction:column; gap:12px; }
+  .msg { padding:10px 14px; border-radius:12px; font-size:.85rem; max-width:80%; line-height:1.5; }
+  .msg-in { background:rgba(255,255,255,.07); border-radius:12px 12px 12px 2px; align-self:flex-start; color:var(--white); }
+  .msg-out { background:rgba(0,229,160,.12); border:1px solid rgba(0,229,160,.15); border-radius:12px 12px 2px 12px; align-self:flex-end; color:var(--accent); font-style:italic; }
+  .chat-exhausted { text-align:center; margin-top:20px; font-size:.8rem; color:var(--muted); padding:12px; background:rgba(255,80,80,.06); border-radius:8px; border:1px solid rgba(255,80,80,.1); }
+
+  /* SOLUTION */
+  .solution-cards { display:grid; grid-template-columns:repeat(3,1fr); gap:24px; margin-top:60px; }
+  .sol-card { background:var(--card); border:1px solid var(--border); border-radius:20px; padding:36px 28px; transition:transform .3s,border-color .3s,box-shadow .3s; position:relative; overflow:hidden; }
+  .sol-card::before { content:''; position:absolute; top:0; left:0; right:0; height:2px; background:linear-gradient(90deg,var(--accent),var(--accent2)); transform:scaleX(0); transition:transform .3s; }
+  .sol-card:hover { transform:translateY(-8px); border-color:rgba(0,229,160,.15); box-shadow:0 24px 60px rgba(0,0,0,.4); }
+  .sol-card:hover::before { transform:scaleX(1); }
+  .sol-icon { width:48px; height:48px; background:rgba(0,229,160,.1); border-radius:14px; display:flex; align-items:center; justify-content:center; font-size:1.4rem; margin-bottom:20px; }
+  .sol-card h3 { font-family:var(--font-head); font-weight:700; font-size:1.05rem; margin-bottom:12px; letter-spacing:-.01em; }
+  .sol-card p { font-size:.9rem; color:var(--muted); line-height:1.7; }
+
+  /* OFFER */
+  .offer { background:var(--mid); }
+  .offer-box { background:var(--card); border:1px solid var(--border); border-radius:28px; padding:60px; max-width:900px; margin:0 auto; position:relative; overflow:hidden; }
+  .offer-box::before { content:''; position:absolute; top:-100px; right:-100px; width:400px; height:400px; background:radial-gradient(circle,rgba(0,229,160,.06) 0%,transparent 70%); pointer-events:none; }
+  .offer-tag { display:inline-block; background:rgba(0,229,160,.1); border:1px solid rgba(0,229,160,.2); color:var(--accent); padding:6px 16px; border-radius:100px; font-size:.75rem; font-weight:600; letter-spacing:.1em; text-transform:uppercase; margin-bottom:28px; }
+  .offer-box h2 { font-family:var(--font-head); font-size:clamp(1.5rem,2.4vw,2.2rem); font-weight:700; letter-spacing:-.01em; margin-bottom:16px; }
+  .offer-box > p { color:var(--muted); margin-bottom:48px; font-size:1rem; }
+
+  /* OFFER FEATURES */
+  .offer-features { display:grid; grid-template-columns:1fr 1fr; gap:16px; margin-bottom:32px; }
+  .offer-feat { display:flex; gap:12px; align-items:flex-start; padding:16px 20px; background:rgba(255,255,255,.03); border-radius:12px; border:1px solid var(--border); font-size:.9rem; }
+  .offer-feat-check { color:var(--accent); font-size:1rem; flex-shrink:0; margin-top:2px; }
+  .offer-feat-text strong { display:block; font-weight:600; font-size:.9rem; margin-bottom:2px; }
+  .offer-feat-text span { font-size:.8rem; color:var(--muted); }
+
+  /* MANAGED vs SELF */
+  .managed-box { margin-bottom:32px; background:rgba(0,229,160,.04); border:1px solid rgba(0,229,160,.15); border-radius:16px; padding:24px; }
+  .managed-title { font-family:var(--font-head); font-size:.85rem; font-weight:700; color:var(--accent); letter-spacing:.08em; text-transform:uppercase; margin-bottom:16px; }
+  .managed-options { display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+  .managed-opt { padding:16px; border-radius:12px; border:1px solid var(--border); background:rgba(255,255,255,.03); }
+  .managed-opt.recommended { border-color:rgba(0,229,160,.3); background:rgba(0,229,160,.06); }
+  .managed-opt-label { display:flex; align-items:center; gap:8px; font-family:var(--font-head); font-size:.82rem; font-weight:700; color:var(--white); margin-bottom:8px; }
+  .recommended-badge { background:var(--accent); color:var(--black); font-size:.6rem; padding:2px 8px; border-radius:50px; font-weight:700; letter-spacing:.05em; text-transform:uppercase; }
+  .managed-opt p { font-size:.8rem; color:var(--muted); line-height:1.6; }
+
+  /* PRICE */
+  .offer-price { display:flex; align-items:flex-end; gap:16px; margin-bottom:24px; padding-top:32px; border-top:1px solid var(--border); flex-wrap:wrap; }
+  .price-amount { font-family:var(--font-head); font-size:3rem; font-weight:800; letter-spacing:-.03em; line-height:1; }
+  .price-amount span { color:var(--accent); }
+  .price-note { font-size:.85rem; color:var(--muted); padding-bottom:6px; }
+
+  /* URGENCY */
+  .urgency-bar { background:rgba(255,80,80,.08); border:1px solid rgba(255,80,80,.2); border-radius:10px; padding:12px 20px; margin-bottom:24px; display:flex; align-items:center; gap:10px; font-size:.85rem; color:rgba(248,247,244,.8); }
+  .urgency-dot { width:8px; height:8px; background:#ff5050; border-radius:50%; animation:pulse 1.5s infinite; flex-shrink:0; }
+
+  /* NO PAYMENT BADGE */
+  .no-payment-badge { display:flex; align-items:center; gap:10px; background:rgba(0,229,160,.06); border:1px solid rgba(0,229,160,.2); border-radius:10px; padding:14px 20px; margin-bottom:24px; }
+  .no-payment-badge span:first-child { font-size:1.2rem; }
+  .no-payment-badge p { font-size:.85rem; color:var(--white); line-height:1.5; }
+  .no-payment-badge p strong { color:var(--accent); }
+
+  .offer-cta { display:flex; gap:16px; flex-wrap:wrap; align-items:center; }
+  .offer-guarantee { font-size:.8rem; color:var(--muted); display:flex; align-items:center; gap:6px; }
+
+  /* TESTIMONIALS */
+  .testi-section { background:var(--black); }
+  .testi-grid { display:grid; grid-template-columns:repeat(2,1fr); gap:24px; margin-top:60px; }
+  .testi-card { background:var(--card); border:1px solid var(--border); border-radius:20px; padding:28px; transition:transform .3s,border-color .3s; }
+  .testi-card:hover { transform:translateY(-4px); border-color:rgba(0,229,160,.15); }
+  .testi-card.featured { grid-column:1/-1; background:rgba(0,229,160,.04); border-color:rgba(0,229,160,.2); }
+  .testi-stars { color:var(--accent); font-size:.85rem; margin-bottom:16px; letter-spacing:2px; }
+  .testi-screenshot { width:100%; border-radius:12px; margin-bottom:16px; border:1px solid var(--border); max-height:200px; object-fit:cover; object-position:top; }
+  .testi-featured-screenshot { width:100%; max-width:340px; border-radius:12px; margin-bottom:16px; border:1px solid rgba(0,229,160,.2); }
+  .testi-voice { margin-bottom:16px; }
+  .testi-voice-label { font-size:.72rem; letter-spacing:.1em; text-transform:uppercase; color:var(--accent); margin-bottom:8px; font-weight:600; }
+  .testi-voice audio { width:100%; height:36px; border-radius:8px; }
+  .testi-quote { font-size:.95rem; line-height:1.75; color:rgba(248,247,244,.85); margin-bottom:20px; font-style:italic; font-weight:300; }
+  .testi-author { display:flex; align-items:center; gap:14px; }
+  .testi-avatar { width:40px; height:40px; border-radius:50%; background:linear-gradient(135deg,var(--accent2),var(--accent)); display:flex; align-items:center; justify-content:center; font-family:var(--font-head); font-weight:800; font-size:.9rem; color:var(--black); flex-shrink:0; }
+  .testi-name { font-family:var(--font-head); font-weight:700; font-size:.9rem; }
+  .testi-role { font-size:.78rem; color:var(--muted); margin-top:2px; }
+  .testi-featured-inner { display:grid; grid-template-columns:1fr 1fr; gap:32px; align-items:start; }
+
+  /* OBJECTIONS */
+  .objections { background:var(--mid); }
+  .obj-grid { display:grid; grid-template-columns:repeat(2,1fr); gap:20px; margin-top:60px; }
+  .obj-item { background:var(--card); border:1px solid var(--border); border-radius:16px; padding:28px; transition:border-color .3s; }
+  .obj-item:hover { border-color:rgba(0,229,160,.15); }
+  .obj-q { font-family:var(--font-head); font-weight:700; font-size:.95rem; color:var(--muted); margin-bottom:12px; display:flex; gap:10px; align-items:flex-start; }
+  .obj-q::before { content:'Q'; background:rgba(255,255,255,.05); width:24px; height:24px; border-radius:6px; display:flex; align-items:center; justify-content:center; font-size:.7rem; flex-shrink:0; margin-top:1px; }
+  .obj-a { font-size:.9rem; color:rgba(248,247,244,.8); line-height:1.7; padding-left:34px; }
+
+  /* CTA */
+  .cta-section { text-align:center; position:relative; overflow:hidden; }
+  .cta-section::before { content:''; position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); width:800px; height:400px; background:radial-gradient(ellipse,rgba(0,229,160,.06) 0%,transparent 70%); pointer-events:none; }
+  .cta-section h2 { font-family:var(--font-head); font-size:clamp(1.8rem,3vw,3rem); font-weight:700; letter-spacing:-.01em; line-height:1.18; margin-bottom:24px; position:relative; }
+  .cta-section h2 em { font-style:normal; color:var(--accent); }
+  .cta-section p { color:var(--muted); font-size:1.1rem; margin-bottom:32px; max-width:500px; margin-left:auto; margin-right:auto; }
+  .cta-trust { display:flex; gap:32px; justify-content:center; margin-top:40px; flex-wrap:wrap; }
+  .trust-item { display:flex; align-items:center; gap:8px; font-size:.85rem; color:var(--muted); }
+  .trust-item span:first-child { color:var(--accent); }
+
+  /* FOOTER */
+  footer { border-top:1px solid var(--border); padding:48px 6vw; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:24px; }
+  .footer-logo { font-family:var(--font-head); font-weight:800; font-size:1.1rem; color:var(--white); text-decoration:none; }
+  .footer-logo span { color:var(--accent); }
+  .footer-links { display:flex; gap:28px; list-style:none; }
+  .footer-links a { color:var(--muted); text-decoration:none; font-size:.85rem; transition:color .2s; }
+  .footer-links a:hover { color:var(--white); }
+  .footer-copy { font-size:.8rem; color:var(--muted); }
+
+  /* POPUP */
+  .popup-overlay { display:none; position:fixed; inset:0; background:rgba(0,0,0,.75); z-index:5000; align-items:center; justify-content:center; padding:20px; backdrop-filter:blur(6px); }
+  .popup-overlay.active { display:flex; }
+  .popup-box { background:var(--card); border:1px solid rgba(0,229,160,.2); border-radius:24px; padding:40px 36px; max-width:480px; width:100%; position:relative; animation:fadeUp .3s ease; }
+  .popup-close { position:absolute; top:16px; right:20px; background:none; border:none; color:var(--muted); font-size:1.4rem; cursor:pointer; line-height:1; transition:color .2s; }
+  .popup-close:hover { color:var(--white); }
+  .popup-label { font-size:.7rem; font-weight:600; letter-spacing:.12em; text-transform:uppercase; color:var(--accent); margin-bottom:10px; }
+  .popup-box h3 { font-family:var(--font-head); font-size:1.3rem; font-weight:800; letter-spacing:-.02em; margin-bottom:6px; }
+  .popup-box .popup-desc { font-size:.85rem; color:var(--muted); margin-bottom:28px; }
+  .popup-step { margin-bottom:20px; }
+  .popup-step label { display:block; font-size:.82rem; font-weight:600; color:var(--white); margin-bottom:8px; font-family:var(--font-head); }
+  .popup-step input { width:100%; background:rgba(255,255,255,.05); border:1px solid var(--border); border-radius:10px; padding:12px 14px; color:var(--white); font-family:var(--font-body); font-size:.9rem; outline:none; transition:border-color .2s; }
+  .popup-step input:focus { border-color:rgba(0,229,160,.4); }
+  .popup-step input::placeholder { color:var(--muted); }
+  .yn-btns { display:flex; gap:10px; }
+  .yn-btn { flex:1; padding:11px; border-radius:10px; border:1px solid var(--border); background:rgba(255,255,255,.04); color:var(--muted); font-family:var(--font-head); font-weight:600; font-size:.88rem; cursor:pointer; transition:all .2s; }
+  .yn-btn:hover,.yn-btn.selected { border-color:var(--accent); color:var(--accent); background:rgba(0,229,160,.08); }
+  .popup-submit { width:100%; margin-top:24px; padding:15px; background:var(--accent); color:var(--black); border:none; border-radius:100px; font-family:var(--font-head); font-weight:700; font-size:.95rem; cursor:pointer; transition:transform .2s,box-shadow .2s; display:flex; align-items:center; justify-content:center; gap:8px; }
+  .popup-submit:hover { transform:translateY(-2px); box-shadow:0 12px 32px rgba(0,229,160,.4); }
+  .popup-privacy { font-size:.72rem; color:var(--muted); text-align:center; margin-top:12px; }
+
+  /* REVEAL */
+  .reveal { opacity:0; transform:translateY(30px); transition:opacity .7s ease,transform .7s ease; }
+  .reveal.visible { opacity:1; transform:translateY(0); }
+
+  /* RESPONSIVE */
+  @media(max-width:768px){
+    body { font-size:15px; cursor:auto; }
+    .cursor,.cursor-ring { display:none; }
+    nav { padding:16px 5vw; background:rgba(8,8,16,.97); }
+    .nav-links { display:none; }
+    .hero { padding:80px 5vw 60px; }
+    .hero h1 { font-size:clamp(1.5rem,5.5vw,2rem); line-height:1.2; }
+    .hero-sub { font-size:.95rem; margin-bottom:32px; }
+    .hero-actions { flex-direction:column; gap:12px; }
+    .hero-actions .btn-primary,.hero-actions .btn-secondary { width:100%; justify-content:center; }
+    .hero-stats { gap:20px; margin-top:48px; padding-top:32px; }
+    .stat-num { font-size:1.8rem; }
+    section { padding:72px 5vw; }
+    .section-title { font-size:clamp(1.2rem,5vw,1.6rem); }
+    .problem-grid { grid-template-columns:1fr; gap:40px; }
+    .solution-cards { grid-template-columns:1fr; }
+    .offer-box { padding:28px 18px; }
+    .offer-features { grid-template-columns:1fr; }
+    .managed-options { grid-template-columns:1fr; }
+    .testi-grid { grid-template-columns:1fr; }
+    .testi-card.featured { grid-column:auto; }
+    .testi-featured-inner { grid-template-columns:1fr; }
+    .obj-grid { grid-template-columns:1fr; }
+    .cta-section h2 { font-size:clamp(1.5rem,6vw,2.2rem); }
+    .cta-trust { gap:14px; flex-direction:column; align-items:center; }
+    .cta-section .btn-primary { width:100%; justify-content:center; }
+    footer { flex-direction:column; text-align:center; padding:36px 5vw; }
+    .footer-links { flex-wrap:wrap; justify-content:center; gap:16px; }
+    .popup-box { padding:28px 20px; }
+    .price-amount { font-size:2.2rem; }
+  }
+</style>
+</head>
+<body>
+
+<div class="cursor" id="cursor"></div>
+<div class="cursor-ring" id="cursorRing"></div>
+
+<!-- NAV -->
+<nav>
+  <a href="#" class="nav-logo">Web<span>Craft</span></a>
+  <ul class="nav-links">
+    <li><a href="#problem">The Problem</a></li>
+    <li><a href="#solution">What We Build</a></li>
+    <li><a href="#offer">Pricing</a></li>
+    <li><a href="#testimonials">Results</a></li>
+    <li><a href="#contact" class="nav-cta">Book Free Call</a></li>
+  </ul>
+</nav>
+
+<!-- TRUST BANNER -->
+<div class="trust-banner">
+  <p>🔒 <strong>See your website before you pay a single kobo.</strong> Free preview — no commitment, no pressure.</p>
+</div>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-grid"></div>
+  <div class="hero-content">
+    <div class="hero-founder">
+      <div class="founder-photo">
+        <img src="images/emmanuel.jpg" alt="Emmanuel" width="56" height="56" loading="eager">
+      </div>
+      <div class="founder-tag">
+        <strong>Emmanuel</strong>
+        WebCraft Nigeria
+      </div>
+    </div>
+    <div class="hero-badge">For Nigerian Product Businesses</div>
+    <h1>Your Customers Are Googling You<br>Right Now and <em>Finding Nothing</em></h1>
+    <p class="hero-sub">We build product catalogue websites that display your products, take orders automatically, and bring you customers from Google — while you focus on running your business.</p>
+    <div class="hero-actions">
+      <button onclick="openPopup()" class="btn-primary">
+        See Your Free Preview
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </button>
+      <a href="#solution" class="btn-secondary">
+        See What We Build
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
+      </a>
+    </div>
+    <div class="hero-stats">
+      <div>
+        <div class="stat-num">24<span>hrs</span></div>
+        <div class="stat-label">Full site live after payment</div>
+      </div>
+      <div>
+        <div class="stat-num">₦150<span>k</span></div>
+        <div class="stat-label">One-time. Nothing after.</div>
+      </div>
+      <div>
+        <div class="stat-num">0<span>₦</span></div>
+        <div class="stat-label">Upfront — see it first</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MARQUEE -->
+<div class="marquee-wrap">
+  <div class="marquee-track">
+    <div class="marquee-item">See Before You Pay <span>✦</span></div>
+    <div class="marquee-item">24hr Delivery <span>✦</span></div>
+    <div class="marquee-item">WhatsApp Ordering <span>✦</span></div>
+    <div class="marquee-item">Cart Abandonment Automation <span>✦</span></div>
+    <div class="marquee-item">SEO Ready <span>✦</span></div>
+    <div class="marquee-item">No Monthly Fees <span>✦</span></div>
+    <div class="marquee-item">Nigerian Businesses <span>✦</span></div>
+    <div class="marquee-item">You Own Everything <span>✦</span></div>
+    <div class="marquee-item">See Before You Pay <span>✦</span></div>
+    <div class="marquee-item">24hr Delivery <span>✦</span></div>
+    <div class="marquee-item">WhatsApp Ordering <span>✦</span></div>
+    <div class="marquee-item">Cart Abandonment Automation <span>✦</span></div>
+    <div class="marquee-item">SEO Ready <span>✦</span></div>
+    <div class="marquee-item">No Monthly Fees <span>✦</span></div>
+    <div class="marquee-item">Nigerian Businesses <span>✦</span></div>
+    <div class="marquee-item">You Own Everything <span>✦</span></div>
+  </div>
+</div>
+
+<!-- PROBLEM -->
+<section class="problem" id="problem">
+  <div class="reveal">
+    <div class="section-label">The Real Cost</div>
+    <h2 class="section-title">What Running Your Business on WhatsApp Is Really Costing You</h2>
+    <p class="section-sub">Every day without a website is a day of invisible customers, missed sales, and money you'll never know you lost.</p>
+  </div>
+  <div class="problem-grid">
+    <ul class="problem-list reveal">
+      <li class="problem-item">
+        <div class="problem-icon">🔍</div>
+        <div class="problem-text">
+          <strong>Google Cannot Find You</strong>
+          <p>Customers searching for what you sell on Google will never see your WhatsApp number. They find your competitor instead.</p>
+        </div>
+      </li>
+      <li class="problem-item">
+        <div class="problem-icon">🌙</div>
+        <div class="problem-text">
+          <strong>Your Business Closes When You Sleep</strong>
+          <p>Every sale requires your personal attention. The moment you step away, your business stops completely.</p>
+        </div>
+      </li>
+      <li class="problem-item">
+        <div class="problem-icon">📉</div>
+        <div class="problem-text">
+          <strong>You Look Smaller Than You Are</strong>
+          <p>A WhatsApp chat signals individual seller. A professional website signals established business. Perception drives purchase decisions.</p>
+        </div>
+      </li>
+      <li class="problem-item">
+        <div class="problem-icon">🔄</div>
+        <div class="problem-text">
+          <strong>The Same Questions Every Single Day</strong>
+          <p>"What is the price?" "Do you have it in blue?" "What is your account number?" You answer these manually, every day, forever.</p>
+        </div>
+      </li>
+    </ul>
+    <div class="reveal">
+      <div class="chat-mock">
+        <div class="chat-header">
+          <div class="chat-avatar">💬</div>
+          <div>
+            <div class="chat-name">Your WhatsApp Business</div>
+            <div class="chat-status">● Online</div>
+          </div>
+        </div>
+        <div class="chat-messages">
+          <div class="msg msg-in">Please what is the price of this one?</div>
+          <div class="msg msg-out">It is ₦8,500. Available in black, white and red.</div>
+          <div class="msg msg-in">Do you have size 42?</div>
+          <div class="msg msg-out">Yes we have size 42. Should I reserve for you?</div>
+          <div class="msg msg-in">Please send more pictures</div>
+          <div class="msg msg-out">One moment let me find the photos...</div>
+          <div class="msg msg-in">What is your account number?</div>
+          <div class="msg msg-in">Hello? Are you there?</div>
+          <div class="msg msg-in">Never mind I bought from someone else</div>
+        </div>
+        <div class="chat-exhausted">⚠️ This conversation repeats 50+ times every day</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SOLUTION -->
+<section id="solution">
+  <div class="reveal">
+    <div class="section-label">The Solution</div>
+    <h2 class="section-title">A Product Catalogue Website Changes Everything</h2>
+    <p class="section-sub">One professional website that works harder than any WhatsApp chat ever could.</p>
+  </div>
+  <div class="solution-cards">
+    <div class="sol-card reveal">
+      <div class="sol-icon">🌐</div>
+      <h3>Google Finds You Automatically</h3>
+      <p>Your products appear when people search on Google — in Lagos, Abuja, Kano, Port Harcourt, and beyond. Free traffic every day from buyers already ready to purchase.</p>
+    </div>
+    <div class="sol-card reveal">
+      <div class="sol-icon">🛍️</div>
+      <h3>Every Product. One Place. Always Professional.</h3>
+      <p>Your complete catalogue — photos, descriptions, prices, sizes, colors — displayed beautifully. No more typing the same information over and over.</p>
+    </div>
+    <div class="sol-card reveal">
+      <div class="sol-icon">💳</div>
+      <h3>Orders and Payments While You Sleep</h3>
+      <p>Customers browse, select, and send orders directly to your WhatsApp automatically. No back and forth. No missed messages.</p>
+    </div>
+    <div class="sol-card reveal">
+      <div class="sol-icon">🤖</div>
+      <h3>Cart Abandonment Automation</h3>
+      <p>When a customer doesn't complete their order, they automatically receive follow up SMS and email messages — bringing them back to buy without you lifting a finger.</p>
+    </div>
+    <div class="sol-card reveal">
+      <div class="sol-icon">📊</div>
+      <h3>Your Customer Data Belongs to You</h3>
+      <p>Every order builds your customer database permanently. Follow up. Announce new products. When customers only contact you on WhatsApp, their data stays on WhatsApp.</p>
+    </div>
+    <div class="sol-card reveal">
+      <div class="sol-icon">📱</div>
+      <h3>Fast on Every Phone, Every Network</h3>
+      <p>Built specifically for Nigerian internet conditions. Loads fast on 3G. Works on every Android phone. Your customers won't struggle to see your products.</p>
+    </div>
+  </div>
+</section>
+
+<!-- OFFER -->
+<section class="offer" id="offer">
+  <div class="offer-box reveal">
+    <div class="offer-tag">The Package</div>
+    <h2>Everything Your Business Needs to Stop Losing Sales</h2>
+    <p>A complete product catalogue website delivered in 24 hours — and you don't pay until you see it and love it.</p>
+
+    <div class="offer-features">
+      <div class="offer-feat">
+        <div class="offer-feat-check">✓</div>
+        <div class="offer-feat-text">
+          <strong>Free Preview First</strong>
+          <span>See your site before paying anything.</span>
+        </div>
+      </div>
+      <div class="offer-feat">
+        <div class="offer-feat-check">✓</div>
+        <div class="offer-feat-text">
+          <strong>Custom Built for Your Brand</strong>
+          <span>No templates. Built from scratch for you.</span>
+        </div>
+      </div>
+      <div class="offer-feat">
+        <div class="offer-feat-check">✓</div>
+        <div class="offer-feat-text">
+          <strong>Full Product Catalogue</strong>
+          <span>Every product displayed professionally.</span>
+        </div>
+      </div>
+      <div class="offer-feat">
+        <div class="offer-feat-check">✓</div>
+        <div class="offer-feat-text">
+          <strong>WhatsApp Ordering Built In</strong>
+          <span>Customers order directly to your WhatsApp.</span>
+        </div>
+      </div>
+      <div class="offer-feat">
+        <div class="offer-feat-check">✓</div>
+        <div class="offer-feat-text">
+          <strong>Cart Abandonment Automation</strong>
+          <span>Auto SMS + email follow ups that bring customers back.</span>
+        </div>
+      </div>
+      <div class="offer-feat">
+        <div class="offer-feat-check">✓</div>
+        <div class="offer-feat-text">
+          <strong>SEO Ready Setup</strong>
+          <span>Submitted to Google so customers can find you.</span>
+        </div>
+      </div>
+      <div class="offer-feat">
+        <div class="offer-feat-check">✓</div>
+        <div class="offer-feat-text">
+          <strong>Mobile Optimized</strong>
+          <span>Fast on every phone and network in Nigeria.</span>
+        </div>
+      </div>
+      <div class="offer-feat">
+        <div class="offer-feat-check">✓</div>
+        <div class="offer-feat-text">
+          <strong>Live in 24 Hours</strong>
+          <span>From payment to live site in one day.</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- MANAGED vs SELF MANAGED -->
+    <div class="managed-box">
+      <div class="managed-title">How do you want to manage your products?</div>
+      <div class="managed-options">
+        <div class="managed-opt recommended">
+          <div class="managed-opt-label">
+            Managed For You
+            <span class="recommended-badge">Recommended</span>
+          </div>
+          <p>Whenever you have a new product just post it on Instagram or send me a WhatsApp message — I'll add it to your site. You do nothing.</p>
+        </div>
+        <div class="managed-opt">
+          <div class="managed-opt-label">Self Managed</div>
+          <p>Full training included if you prefer to manage your own catalogue and add products yourself.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- NO PAYMENT BADGE -->
+    <div class="no-payment-badge">
+      <span>🔒</span>
+      <p><strong>See your website before you pay a single kobo.</strong> I build your free preview first. You only pay when you love it.</p>
+    </div>
+
+    <!-- URGENCY -->
+    <div class="urgency-bar">
+      <div class="urgency-dot"></div>
+      Only 3 consultation slots available this week — slots fill fast.
+    </div>
+
+    <div class="offer-price">
+      <div class="price-amount"><span>₦150,000</span></div>
+      <div class="price-note">One-time payment · No monthly fees · You own everything</div>
+    </div>
+
+    <div class="offer-cta">
+      <button onclick="openPopup()" class="btn-primary">
+        Get Your Free Preview
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </button>
+      <div class="offer-guarantee">
+        <span>✓</span>
+        No pressure. No obligation. Just clarity.
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="testi-section" id="testimonials">
+  <div class="reveal">
+    <div class="section-label">Real Reactions</div>
+    <h2 class="section-title">What Nigerian Business Owners Said</h2>
+    <p class="section-sub">Real WhatsApp conversations. Real reactions. Nothing staged.</p>
+  </div>
+
+  <div class="testi-grid">
+
+    <!-- FEATURED — Mercy Ked Collection — screenshot + voice note -->
+    <div class="testi-card featured reveal">
+      <div class="testi-featured-inner">
+        <div>
+          <div class="testi-stars">★★★★★</div>
+          <img src="testimonials/mercyked.jpg" alt="Mercy Ked Collection reaction" class="testi-featured-screenshot">
+          <div class="testi-author">
+            <div class="testi-avatar">M</div>
+            <div>
+              <div class="testi-name">Mercy Ked Collection</div>
+              <div class="testi-role">Fashion & Collections Business</div>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div class="testi-voice">
+            <div class="testi-voice-label">🎙 Voice note reaction</div>
+            <audio controls>
+              <source src="testimonials/mercyked-voice.mp3" type="audio/mpeg">
+            </audio>
+          </div>
+          <p class="testi-quote">"Wow this is nice... You really went through my page"</p>
+          <p style="font-size:.8rem;color:var(--muted);line-height:1.6;">When Mercy saw her free preview she was amazed that it was built specifically around her business — her products, her style, her brand.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Vique Hub -->
+    <div class="testi-card reveal">
+      <div class="testi-stars">★★★★★</div>
+      <img src="testimonials/viquehub.jpg" alt="Vique Hub reaction" class="testi-screenshot">
+      <p class="testi-quote">"It's really nice — How much would it cost"</p>
+      <div class="testi-author">
+        <div class="testi-avatar">V</div>
+        <div>
+          <div class="testi-name">Vique Hub</div>
+          <div class="testi-role">Luxury Bags & Shoes — Port Harcourt</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Aim Aboki -->
+    <div class="testi-card reveal">
+      <div class="testi-stars">★★★★★</div>
+      <img src="testimonials/aimaboki.jpg" alt="Aim Aboki reaction" class="testi-screenshot">
+      <p class="testi-quote">"How much??" — Asked immediately after seeing the preview</p>
+      <div class="testi-author">
+        <div class="testi-avatar">A</div>
+        <div>
+          <div class="testi-name">Aim Aboki Gold</div>
+          <div class="testi-role">Gold & Luxury Products</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Anonymous 1 -->
+    <div class="testi-card reveal">
+      <div class="testi-stars">★★★★★</div>
+      <img src="testimonials/anon1.jpg" alt="Client reaction" class="testi-screenshot">
+      <p class="testi-quote">"Do me well ooooo — I still have another one after this!"</p>
+      <div class="testi-author">
+        <div class="testi-avatar">B</div>
+        <div>
+          <div class="testi-name">Business Owner</div>
+          <div class="testi-role">Bakery Business — Lagos</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Anonymous 2 -->
+    <div class="testi-card reveal">
+      <div class="testi-stars">★★★★★</div>
+      <img src="testimonials/anon2.jpg" alt="Client reaction" class="testi-screenshot">
+      <p class="testi-quote">"It Nice 👍" — First reaction after seeing the preview</p>
+      <div class="testi-author">
+        <div class="testi-avatar">S</div>
+        <div>
+          <div class="testi-name">Business Owner</div>
+          <div class="testi-role">Luxury Footwear Business</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- OBJECTIONS -->
+<section class="objections">
+  <div class="reveal">
+    <div class="section-label">Common Questions</div>
+    <h2 class="section-title">We Have Heard Every Concern</h2>
+    <p class="section-sub">The honest answers to everything that might be holding you back.</p>
+  </div>
+  <div class="obj-grid">
+    <div class="obj-item reveal">
+      <div class="obj-q">My customers prefer WhatsApp.</div>
+      <div class="obj-a">Your current customers use WhatsApp because that is the only option you have given them. When you give them a professional website where they can see everything clearly and order instantly — they will prefer that. WhatsApp is still there as an option.</div>
+    </div>
+    <div class="obj-item reveal">
+      <div class="obj-q">Nigerians do not trust buying from websites.</div>
+      <div class="obj-a">Nigerians spend billions on Jumia, Konga, and independent stores every month. What people don't trust is a website that looks unprofessional. A properly built site removes every trust barrier completely.</div>
+    </div>
+    <div class="obj-item reveal">
+      <div class="obj-q">I cannot afford it right now.</div>
+      <div class="obj-a">If your average order is ₦15,000 and your website brings you just five additional customers per month from Google alone — that is ₦75,000 extra every month. Your website pays for itself in two months and keeps paying indefinitely.</div>
+    </div>
+    <div class="obj-item reveal">
+      <div class="obj-q">I am not technically inclined.</div>
+      <div class="obj-a">You don't need to be. I build the entire site, add your products from Instagram, and set up everything. Whenever you have new products just send me on WhatsApp or post on Instagram — I handle it all.</div>
+    </div>
+    <div class="obj-item reveal">
+      <div class="obj-q">How do I know it will look good?</div>
+      <div class="obj-a">You see it before you pay. I build your complete free preview first — designed specifically for your business. If you don't love it, you don't pay. Simple as that.</div>
+    </div>
+    <div class="obj-item reveal">
+      <div class="obj-q">I will do it when business picks up.</div>
+      <div class="obj-a">Business picks up because of the website. Not after. Every business owner who has launched a proper catalogue website says the same thing — they only wish they had done it sooner.</div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-section" id="contact">
+  <div class="reveal">
+    <h2>Your Business Is Ready.<br>Is Your <em>Website?</em></h2>
+    <p>Get your free preview today. See exactly what your business looks like online — before paying a single kobo.</p>
+
+    <div class="urgency-bar" style="max-width:440px;margin:0 auto 32px;justify-content:center;">
+      <div class="urgency-dot"></div>
+      Only 3 slots left this week
+    </div>
+
+    <button onclick="openPopup()" class="btn-primary" style="display:inline-flex;font-size:1.05rem;padding:18px 40px;">
+      Get My Free Preview
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+    </button>
+    <div class="cta-trust">
+      <div class="trust-item"><span>✓</span> See it before you pay</div>
+      <div class="trust-item"><span>✓</span> No monthly fees ever</div>
+      <div class="trust-item"><span>✓</span> Live in 24 hours</div>
+      <div class="trust-item"><span>✓</span> You own everything</div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <a href="#" class="footer-logo">Web<span>Craft</span></a>
+  <ul class="footer-links">
+    <li><a href="#problem">The Problem</a></li>
+    <li><a href="#solution">What We Build</a></li>
+    <li><a href="#offer">Pricing</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <div class="footer-copy">© 2026 WebCraft Nigeria. All rights reserved.</div>
+</footer>
+
+<!-- POPUP -->
+<div class="popup-overlay" id="popupOverlay">
+  <div class="popup-box">
+    <button class="popup-close" onclick="closePopup()">×</button>
+    <div class="popup-label">Free Preview — No Payment</div>
+    <h3>Get Your Free Website Preview</h3>
+    <p class="popup-desc">Fill in your details and I'll build your free preview — you see it before paying anything.</p>
+
+    <div class="popup-step">
+      <label>1. Your email address</label>
+      <input type="email" id="popEmail" placeholder="e.g. yourname@gmail.com">
+    </div>
+
+    <div class="popup-step">
+      <label>2. Your WhatsApp number</label>
+      <input type="tel" id="popPhone" placeholder="e.g. 08012345678">
+    </div>
+
+    <div class="popup-step">
+      <label>3. Do you currently have a website?</label>
+      <div class="yn-btns">
+        <button class="yn-btn" id="ynYes" onclick="selectYN('Yes')">Yes</button>
+        <button class="yn-btn" id="ynNo" onclick="selectYN('No')">No</button>
+      </div>
+    </div>
+
+    <button class="popup-submit" onclick="submitPopup()">
+      Get My Free Preview
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+    </button>
+    <p class="popup-privacy">🔒 Your details are private. No spam ever.</p>
+  </div>
+</div>
+
+<script>
+  // Custom cursor
+  const isMobile = window.matchMedia('(max-width:768px)').matches || ('ontouchstart' in window);
+  const cursor = document.getElementById('cursor');
+  const ring = document.getElementById('cursorRing');
+  if(!isMobile) {
+    let mouseX=0,mouseY=0,ringX=0,ringY=0;
+    document.addEventListener('mousemove', e => { mouseX=e.clientX; mouseY=e.clientY; cursor.style.left=mouseX+'px'; cursor.style.top=mouseY+'px'; });
+    function animateRing(){ ringX+=(mouseX-ringX)*.12; ringY+=(mouseY-ringY)*.12; ring.style.left=ringX+'px'; ring.style.top=ringY+'px'; requestAnimationFrame(animateRing); }
+    animateRing();
+    document.querySelectorAll('a,button').forEach(el => {
+      el.addEventListener('mouseenter',()=>{ cursor.style.transform='translate(-50%,-50%) scale(2)'; ring.style.transform='translate(-50%,-50%) scale(1.5)'; ring.style.opacity='.2'; });
+      el.addEventListener('mouseleave',()=>{ cursor.style.transform='translate(-50%,-50%) scale(1)'; ring.style.transform='translate(-50%,-50%) scale(1)'; ring.style.opacity='.5'; });
+    });
+  }
+
+  // Scroll reveal
+  const reveals = document.querySelectorAll('.reveal');
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => { if(entry.isIntersecting){ setTimeout(()=>entry.target.classList.add('visible'),100); observer.unobserve(entry.target); } });
+  }, { threshold:.1 });
+  reveals.forEach(el => observer.observe(el));
+
+  document.querySelectorAll('.solution-cards,.testi-grid,.obj-grid,.problem-list').forEach(parent => {
+    parent.querySelectorAll('.reveal').forEach((child,i) => { child.style.transitionDelay=(i*.1)+'s'; });
+  });
+
+  // Popup
+  let selectedYN = '';
+  function openPopup(){ document.getElementById('popupOverlay').classList.add('active'); document.body.style.overflow='hidden'; }
+  function closePopup(){ document.getElementById('popupOverlay').classList.remove('active'); document.body.style.overflow=''; }
+  document.getElementById('popupOverlay').addEventListener('click', function(e){ if(e.target===this) closePopup(); });
+  function selectYN(val){ selectedYN=val; document.getElementById('ynYes').classList.toggle('selected',val==='Yes'); document.getElementById('ynNo').classList.toggle('selected',val==='No'); }
+
+  async function submitPopup() {
+    const email = document.getElementById('popEmail').value.trim();
+    const phone = document.getElementById('popPhone').value.trim();
+    if(!email){ alert('Please enter your email address.'); return; }
+    if(!selectedYN){ alert('Please answer whether you have a website.'); return; }
+
+    // Build WhatsApp message
+    const waMsg = encodeURIComponent(
+      `Hello Emmanuel, I would like to book a free consultation.\n\n` +
+      `Email: ${email}\n` +
+      `Phone: ${phone || 'Not provided'}\n` +
+      `Do I have a website: ${selectedYN}`
+    );
+    sessionStorage.setItem('waUrl', `https://wa.me/2349031375718?text=${waMsg}`);
+
+    // Save to Google Sheets
+    const gsUrl = 'https://script.google.com/macros/s/AKfycbzh_EutYf6FKSdGq4K5CFwWAfltvjzIw9RLteOYJaNlajJCd_0IuLXXC5PCjaonNTieAA/exec';
+    const form = document.createElement('form');
+    form.method='POST'; form.action=gsUrl; form.target='hidden_iframe'; form.style.display='none';
+    const addField=(name,value)=>{ const input=document.createElement('input'); input.type='hidden'; input.name=name; input.value=value; form.appendChild(input); };
+    addField('email', email);
+    addField('phone', phone);
+    addField('hasWebsite', selectedYN);
+    addField('status', 'lead');
+    addField('followUpCount', '0');
+    addField('sequence', 'followup');
+    document.body.appendChild(form);
+    form.submit();
+
+    // Trigger Netlify automation function
+    try {
+      await fetch('/.netlify/functions/automation', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ action: 'new_lead', email, phone, hasWebsite: selectedYN }),
+      });
+    } catch(e) { console.log('Automation trigger failed:', e); }
+
+    // Pixels
+    if(typeof ttq !== 'undefined') ttq.track('SubmitForm');
+    if(typeof gtag !== 'undefined') gtag('event','conversion',{'send_to':'AW-18084238363'});
+    if(typeof fbq !== 'undefined') fbq('track','Lead');
+
+    setTimeout(()=>{ window.location.href='thank-you.html'; }, 1500);
+  }
+
+  // Smooth scroll
+  document.querySelectorAll('a[href^="#"]').forEach(a => {
+    a.addEventListener('click', e => { const t=document.querySelector(a.getAttribute('href')); if(t){e.preventDefault();t.scrollIntoView({behavior:'smooth'});} });
+  });
+</script>
+<iframe name="hidden_iframe" style="display:none;"></iframe>
+</body>
+</html>
