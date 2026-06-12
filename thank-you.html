@@ -125,11 +125,11 @@ fbq('track', 'Lead');
 
 <div class="container">
   <div class="check">✓</div>
-  <h1>You're One Step<br>Away <span>From Your Site</span></h1>
+  <h1>One Last Step —<br><span>Send That Message</span></h1>
   <p>Your request has been received.</p>
 
   <div class="wa-instruction">
-    WhatsApp is opening now — please press <strong>Send</strong> to complete your enquiry and I'll get back to you within the hour.
+    WhatsApp is opening now — just press <strong>Send</strong> and I'll respond as soon as I can.
   </div>
 
   <p class="countdown">Opening WhatsApp in <span id="timer">3</span> seconds...</p>
@@ -150,7 +150,7 @@ fbq('track', 'Lead');
   if(waUrl) {
     waBtn.href = waUrl;
 
-    // Auto open after countdown
+    // Auto redirect after countdown
     let count = 3;
     const timer = document.getElementById('timer');
     const interval = setInterval(() => {
@@ -158,8 +158,7 @@ fbq('track', 'Lead');
       timer.textContent = count;
       if(count <= 0) {
         clearInterval(interval);
-        window.open(waUrl, '_blank');
-        timer.parentElement.textContent = 'WhatsApp opened. Please press Send to complete your enquiry.';
+        window.location.href = waUrl;
       }
     }, 1000);
   } else {
