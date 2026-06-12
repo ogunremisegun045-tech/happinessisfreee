@@ -338,8 +338,8 @@ fbq('track', 'PageView');
       </div>
     </div>
     <div class="hero-badge">For Nigerian Product Businesses</div>
-    <h1>Your Customers Are Googling You<br>Right Now and <em>Finding Nothing</em></h1>
-    <p class="hero-sub">We build product catalogue websites that display your products, take orders automatically, and bring you customers from Google — while you focus on running your business.</p>
+    <h1>Stop Answering the Same<br>WhatsApp Questions.<br><em>Get a Website That Does It For You.</em></h1>
+    <p class="hero-sub">Every day you spend answering "what's the price", "do you have my size", "what's your account number" is a day your business is running you — not the other way around. We build product catalogue websites that answer every question, take orders, and bring you new customers automatically.</p>
     <div class="hero-actions">
       <button onclick="openPopup()" class="btn-primary">
         See Your Free Preview
@@ -618,29 +618,17 @@ fbq('track', 'PageView');
 
   <div class="testi-grid">
 
-    <!-- FEATURED — Mercy Ked Collection — screenshot + voice note -->
+    <!-- FEATURED — Mercy Ked Collection -->
     <div class="testi-card featured reveal">
-      <div class="testi-featured-inner">
+      <div class="testi-stars">★★★★★</div>
+      <img src="testimonials/mercyked.jpg" alt="Mercy Ked Collection reaction" style="width:100%;border-radius:12px;margin-bottom:16px;border:1px solid rgba(0,229,160,.2);">
+      <p class="testi-quote">"Wow this is nice... You really went through my page"</p>
+      <p style="font-size:.8rem;color:var(--muted);line-height:1.6;margin-bottom:20px;">When Mercy saw her free preview she was amazed that it was built specifically around her business — her products, her style, her brand.</p>
+      <div class="testi-author">
+        <div class="testi-avatar">M</div>
         <div>
-          <div class="testi-stars">★★★★★</div>
-          <img src="testimonials/mercyked.jpg" alt="Mercy Ked Collection reaction" class="testi-featured-screenshot">
-          <div class="testi-author">
-            <div class="testi-avatar">M</div>
-            <div>
-              <div class="testi-name">Mercy Ked Collection</div>
-              <div class="testi-role">Fashion & Collections Business</div>
-            </div>
-          </div>
-        </div>
-        <div>
-          <div class="testi-voice">
-            <div class="testi-voice-label">🎙 Voice note reaction</div>
-            <audio controls>
-              <source src="testimonials/mercyked-voice.mp3" type="audio/mpeg">
-            </audio>
-          </div>
-          <p class="testi-quote">"Wow this is nice... You really went through my page"</p>
-          <p style="font-size:.8rem;color:var(--muted);line-height:1.6;">When Mercy saw her free preview she was amazed that it was built specifically around her business — her products, her style, her brand.</p>
+          <div class="testi-name">Mercy Ked Collection</div>
+          <div class="testi-role">Fashion & Collections Business</div>
         </div>
       </div>
     </div>
@@ -676,7 +664,7 @@ fbq('track', 'PageView');
     <!-- Anonymous 1 -->
     <div class="testi-card reveal">
       <div class="testi-stars">★★★★★</div>
-      <img src="testimonials/anon1.jpg" alt="Client reaction" class="testi-screenshot">
+      <img src="testimonials/anon1.jpg" alt="Client reaction" class="testi-featured-screenshot" style="max-width:100%;">
       <p class="testi-quote">"Do me well ooooo — I still have another one after this!"</p>
       <div class="testi-author">
         <div class="testi-avatar">B</div>
@@ -843,11 +831,23 @@ fbq('track', 'PageView');
   document.getElementById('popupOverlay').addEventListener('click', function(e){ if(e.target===this) closePopup(); });
   function selectYN(val){ selectedYN=val; document.getElementById('ynYes').classList.toggle('selected',val==='Yes'); document.getElementById('ynNo').classList.toggle('selected',val==='No'); }
 
+  let submitted = false;
+
   async function submitPopup() {
+    if (submitted) return; // block any repeat calls
+
     const email = document.getElementById('popEmail').value.trim();
     const phone = document.getElementById('popPhone').value.trim();
     if(!email){ alert('Please enter your email address.'); return; }
     if(!selectedYN){ alert('Please answer whether you have a website.'); return; }
+
+    // Lock immediately
+    submitted = true;
+    const btn = document.querySelector('.popup-submit');
+    btn.disabled = true;
+    btn.innerHTML = 'Sending... ⏳';
+    btn.style.opacity = '0.6';
+    btn.style.cursor = 'not-allowed';
 
     // Build WhatsApp message
     const waMsg = encodeURIComponent(
@@ -872,21 +872,20 @@ fbq('track', 'PageView');
     document.body.appendChild(form);
     form.submit();
 
-    // Trigger Netlify automation function
-    try {
-      await fetch('/.netlify/functions/automation', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ action: 'new_lead', email, phone, hasWebsite: selectedYN }),
-      });
-    } catch(e) { console.log('Automation trigger failed:', e); }
+    // Fire and forget — don't await, redirect immediately
+    fetch('/.netlify/functions/automation', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ action: 'new_lead', email, phone, hasWebsite: selectedYN }),
+    }).catch(e => console.log('Automation trigger failed:', e));
 
     // Pixels
     if(typeof ttq !== 'undefined') ttq.track('SubmitForm');
     if(typeof gtag !== 'undefined') gtag('event','conversion',{'send_to':'AW-18084238363'});
     if(typeof fbq !== 'undefined') fbq('track','Lead');
 
-    setTimeout(()=>{ window.location.href='thank-you.html'; }, 1500);
+    // Redirect instantly — no delay
+    window.location.href = 'thank-you.html';
   }
 
   // Smooth scroll
